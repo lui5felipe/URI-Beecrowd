@@ -5,24 +5,18 @@ using namespace std;
 
 int main()
 {
-    cout.setf(ios::fixed);
-    float i=0.0, j=1.0;
-    while(i<=2.0)
+    int i=1, base=7, j=base;
+    while(i<=9)
     {
-        if(i==0.0 || i==1.0)
-            cout << "I=" << setprecision(0) << i << " J=" << j+i << endl;
-        else
-            cout << "I=" << setprecision(1) << i << " J=" << j+i << endl;
-        if(j>=3.0)
+        cout << "I=" << i << " J=" << j << endl;
+        if(j==(base-2))
         {
-            j=1;
-            i+=0.2;
+            base+=2;
+            j=base;
+            i+=2;
         }
         else
-            j+=1.0;
+            j--;
     }
-    cout << "I=" << setprecision(0) << i << " J=" << j+i << endl;
-    cout << "I=" << setprecision(0) << i << " J=" << j+i+1.0 << endl;
-    cout << "I=" << setprecision(0) << i << " J=" << j+i+2.0 << endl;
     return 0;
 }
